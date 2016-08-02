@@ -1,2 +1,2 @@
-# seventhinkers-react
-Versão React da Página
+#seventhinkers
+Site de Eventos
