@@ -1,12 +1,12 @@
 import React from 'react';
 import reactDOM from 'react-dom';
-import Greeting from './components/Greeting';
+import Meta from './components/Meta';
 
 class App {
 	static main () {
 		reactDOM.render (
-			<Greeting/>,
-			document.getElementById('app')
+			<Meta/>,
+			document.getElementById('meta')
 			);
 	}
 }

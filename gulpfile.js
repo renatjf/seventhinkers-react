@@ -10,7 +10,7 @@ const instant = require('instant');
 
 //config
 const empresa = "Seven Thinkers";
-const SRC_JS = "./site/assets/App.js";
+const SRC_JS = "./site/assets/root.js";
 const NAME_BUNDLE = "site-bundle.js";
 const DEST_BUNDLE = "./site/js";
 const DEST_PORTAL = "site";

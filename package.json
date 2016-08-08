@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "react": "^15.3.0",
+    "react-doc-meta": "^0.2.0",
+    "react-document-meta": "^2.0.3",
     "react-dom": "^15.3.0"
   },
   "devDependencies": {
