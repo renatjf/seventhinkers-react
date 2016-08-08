@@ -8,9 +8,18 @@ const express = require('express');
 const instant = require('instant');
 
 
+//config
+const empresa = "Seven Thinkers";
+const SRC_JS = "./site/assets/App.js";
+const NAME_BUNDLE = "site-bundle.js";
+const DEST_BUNDLE = "./site/js";
+const DEST_PORTAL = "site";
+const EXECUTE_PORTAL = "index.html";
+//end config
+
 gulp.task('build', function(){
 
-	return browserify('./site/assets/App.js', {
+	return browserify(SRC_JS, {
 		debug: true
 	})
 
@@ -19,21 +28,22 @@ gulp.task('build', function(){
 	}))
 
 	.bundle()
-	.pipe(source('bundle.js'))
-	.pipe(gulp.dest('./site/js'));
+	.pipe(source(NAME_BUNDLE))
+	.pipe(gulp.dest(DEST_BUNDLE));
 
 });
 
 
 gulp.task('server', function () {
 	const app = express();
-	app.use(instant({ root: 'site'}));
+	app.use(instant({ root: DEST_PORTAL}));
 	app.get('*', 	function(req, res) {
-		res.sendFile('index.html')
+		res.sendFile(EXECUTE_PORTAL)
 	});
 
 	app.listen(3000, function() {
-		console.log('abrindo porta 3000')
+		console.log('Abrindo porta 3000');
+		console.log('Executando Portal', empresa);
 	})
 });
 
