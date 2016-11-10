@@ -1,14 +1,13 @@
 import React from 'react';
-import reactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import Meta from './components/Meta';
 
 class App {
-	static main () {
-		reactDOM.render (
-			<Meta/>,
-			document.getElementById('meta')
-			);
+	static main () {    
+		ReactDOM.render (    
+      <Meta/>,
+      document.body      
+			);    
 	}
 }
-
 App.main();
